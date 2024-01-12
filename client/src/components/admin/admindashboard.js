@@ -1,7 +1,7 @@
+import React, { useState } from "react";
+import "./adminDashboard.css";
+import AdminHeader from "./adminheader"; // Importa el componente AdminHeader
 
-
-import React, { useState } from 'react';
-import './adminDashboard.css';
 
 function AdminDashboard() {
   const [mostrarModal, setMostrarModal] = useState(false);
@@ -10,15 +10,15 @@ function AdminDashboard() {
 
   // Datos de ejemplo para empleados y clientes (simula la información de la base de datos)
   const empleados = [
-    { id: 1, nombre: 'Empleado 1' },
-    { id: 2, nombre: 'Empleado 2' },
-    { id: 3, nombre: 'Empleado 3' },
+    { id: 1, nombre: "Empleado 1" },
+    { id: 2, nombre: "Empleado 2" },
+    { id: 3, nombre: "Empleado 3" },
   ];
 
   const clientes = [
-    { id: 101, nombre: 'Cliente A' },
-    { id: 102, nombre: 'Cliente B' },
-    { id: 103, nombre: 'Cliente C' },
+    { id: 101, nombre: "Cliente A" },
+    { id: 102, nombre: "Cliente B" },
+    { id: 103, nombre: "Cliente C" },
   ];
 
   const handleAsignarClick = () => {
@@ -31,8 +31,8 @@ function AdminDashboard() {
 
   const handleAceptarCambios = () => {
     // Lógica para aceptar los cambios (puedes personalizar según tus necesidades)
-    console.log('Empleados seleccionados:', empleadosSeleccionados);
-    console.log('Clientes seleccionados:', clientesSeleccionados);
+    console.log("Empleados seleccionados:", empleadosSeleccionados);
+    console.log("Clientes seleccionados:", clientesSeleccionados);
     setMostrarModal(false);
   };
 
@@ -60,18 +60,7 @@ function AdminDashboard() {
 
   return (
     <div>
-      <header>
-        <nav>
-          <ul>
-            <li>Inicio</li>
-            <li>Procesos</li>
-            <li>Usuarios</li>
-            <li>Salir</li>
-          </ul>
-        </nav>
-      </header>
-
-
+      <AdminHeader />
       <main>
         <h1>Bienvenido al Panel de Administración</h1>
         <div>
@@ -97,8 +86,12 @@ function AdminDashboard() {
                         <label>
                           <input
                             type="checkbox"
-                            checked={empleadosSeleccionados.includes(empleado.id)}
-                            onChange={() => handleEmpleadoCheckboxChange(empleado.id)}
+                            checked={empleadosSeleccionados.includes(
+                              empleado.id
+                            )}
+                            onChange={() =>
+                              handleEmpleadoCheckboxChange(empleado.id)
+                            }
                           />
                           {empleado.nombre}
                         </label>
@@ -114,7 +107,9 @@ function AdminDashboard() {
                           <input
                             type="checkbox"
                             checked={clientesSeleccionados.includes(cliente.id)}
-                            onChange={() => handleClienteCheckboxChange(cliente.id)}
+                            onChange={() =>
+                              handleClienteCheckboxChange(cliente.id)
+                            }
                           />
                           {cliente.nombre}
                         </label>

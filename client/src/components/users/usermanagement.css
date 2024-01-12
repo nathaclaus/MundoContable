@@ -1,0 +1,46 @@
+
+  .add-user-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .add-user-button:hover {
+    background-color:blue;
+  }
+  
+
+  /* usermanagement.css */
+
+.user-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.user-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.editar-btn {
+  background-color: #007bff; /* Azul para el botón de editar */
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.eliminar-btn {
+  background-color: #dc3545; /* Rojo para el botón de eliminar */
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
